@@ -21,3 +21,10 @@ print(f'El numero de casos de contagios en Colombia es de: {n_Casos}')
 """
 n_Municipio = len(data.groupby('Nombre municipio').size())
 print(f'El numero de municipio afectado es de : {n_Municipio}')
+
+"""
+3. Liste los municipios afectados (sin repetirlos)
+"""
+l_municipio = data.groupby(
+'Nombre municipio').size().sort_values(ascending=False)
+print(f'\nMunicipios afectados: {l_municipio}')
